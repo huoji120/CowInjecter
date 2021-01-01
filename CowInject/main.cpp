@@ -113,7 +113,7 @@ extern "C" NTSTATUS DriverEntry(PDRIVER_OBJECT driver, PUNICODE_STRING reg_path)
 {
 	DebugPrintA("init Driver \n");
 	/*
-		³õÊ¼»¯shellcode
+		Â³ÃµÃŠÂ¼Â»Â¯shellcode
 	*/
 	//uintptr_t size_of_shellcode = CALCSIZE(HkCreateFileW, ShellCodeEnd);
 	uintptr_t size_of_shellcode = sizeof(HookCode);
@@ -223,7 +223,7 @@ extern "C" NTSTATUS DriverEntry(PDRIVER_OBJECT driver, PUNICODE_STRING reg_path)
 							DebugPrintA("success hooked at: %p \n", hook_function);
 
 						} else {
-							DebugPrintA("can not get free speace for shellcode \n");
+							DebugPrintA("Cannot free space for shellcode \n");
 						}
 					}
 					else {
